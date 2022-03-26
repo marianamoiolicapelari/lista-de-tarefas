@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+}
+
+#btn-add {
+  background: #8052ec;
+  border-radius: 5px;
+  height: 40px;
+  border: none;
+  padding: 0 15px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  float: right;
+}
+
+#btn-add:hover {
+  opacity: 0.8;
+}
+
+#btn-add:active {
+  opacity: 0.6;
+}
+
+.container {
+  background: #ffffff;
+  width: 541px;
+  height: 498px;
+  border-radius: 5px;
+  margin: 100px auto 0;
+  padding: 30px 20px;
+}
+
+#input-principal {
+  width: 342px;
+  height: 40px;
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+#tarefas {
+  width: 100%;
+  list-style: none;
+  margin-top: 60px;
+}
+
+.item-tarefa {
+  background: #f2f2f2;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px 45px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.nome-tarefa {
+  color: #000000;
+  font-size: 15px;
+}
+
+.botao-delete {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fa-trash {
+  color: #ff0000;
+}
+
+.btn-rocket {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fa-rocket {
+  color: #8052ec;
+}
+
+.item-tarefa:hover .botao-delete {
+  opacity: 1;
+}
+
+.item-tarefa:hover .btn-rocket {
+  opacity: 1;
+}

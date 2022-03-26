@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c0b032b1a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <input id="input-principal" placeholder="O que tenho que fazer..." />
+      <button id="btn-add">Adicionar</button>
+
+      <ul id="tarefas">
+        <li class="item-tarefa">
+          <button class="btn-rocket"><i class="fa-solid fa-rocket"></i></button>
+
+          <p class="nome-tarefa">Estudar Programação</p>
+
+          <button class="botao-delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </li>
+        <li class="item-tarefa">
+          <button class="btn-rocket"><i class="fa-solid fa-rocket"></i></button>
+
+          <p class="nome-tarefa">Estudar JavaScript</p>
+
+          <button class="botao-delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </li>
+      </ul>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
