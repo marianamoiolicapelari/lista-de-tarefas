@@ -8,7 +8,7 @@ let arrayAddTask = []
 function viewTask() {
   let newLi = ''
 
-  arrayAddTask.forEach((addTask) => {
+  arrayAddTask.forEach((addTask, index) => {
 
      newLi = newLi + `<li class="item-tarefa">
   <button class="btn-rocket">
@@ -17,7 +17,7 @@ function viewTask() {
   
   <p class="nome-tarefa" id="nome-tarefa-id">${addTask}</p>
 
-  <button class="botao-delete">
+  <button class="botao-delete" onclick="delTask(${index})">
   <i class="fa-solid fa-trash"></i>
   </button>
   </li>`
@@ -26,11 +26,16 @@ function viewTask() {
     fullList.innerHTML = newLi
 }
 
+function delTask(index){
+  arrayAddTask.splice(index, 1)
+
+  viewTask()
+}
+
 function addTask() {
   arrayAddTask.push(input.value)
 
   viewTask()
-  
 }
 
 button.addEventListener('click', addTask)
