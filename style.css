@@ -9,11 +9,11 @@
 }
 
 body {
-  background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #921ba1 100%);
 }
 
 #btn-add {
-  background: #8052ec;
+  background: #06db06;
   border-radius: 5px;
   height: 40px;
   border: none;
@@ -38,8 +38,9 @@ body {
   width: 541px;
   height: auto;
   border-radius: 5px;
-  margin: 100px auto 0;
+  margin: 100px auto;
   padding: 30px 20px;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.50);
 }
 
 .titulo-contaniner {
