@@ -42,6 +42,11 @@ body {
   padding: 30px 20px;
 }
 
+.titulo-contaniner {
+  font-size: 22px;
+  padding: 20px 5px;
+}
+
 #input-principal {
   width: 342px;
   height: 40px;
@@ -126,4 +131,16 @@ body {
   #input-principal {
     width: 300px;
   }
+  
+}
+
+@media screen and (max-width: 450px){
+  .container {
+    width: 320px;
+  }
+
+  #input-principal {
+    width: 280px;
+  }
+
 }
