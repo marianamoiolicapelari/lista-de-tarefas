@@ -1,4 +1,4 @@
-let input = document.getElementById('input-principal')
+let input = document.querySelector('input-principal')
 let button = document.getElementById('btn-add')
 let task = document.getElementById('nome-tarefa-id')
 let fullList = document.getElementById('tarefas')
