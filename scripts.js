@@ -2,6 +2,11 @@ let input = document.getElementById('input-principal')
 let button = document.getElementById('btn-add')
 let task = document.getElementById('nome-tarefa-id')
 let fullList = document.getElementById('tarefas')
+let dados = localStorage.getItem('lista')
+
+if (dados == null) {
+  localStorage.setItem('lista', JSON.stringify(arrayAddTask))
+}
 
 let arrayAddTask = []
 reloadTask()
@@ -43,6 +48,9 @@ function addTask() {
 
   
   viewTask()
+
+  input.value = ''
+  input.focus()
 }
 
 function completeTask(index) {
