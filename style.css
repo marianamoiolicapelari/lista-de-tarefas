@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #7f00ff 0%, #921ba1 100%);
+  background: linear-gradient(90deg, #b7b6b8 0%, #ebebeb 100%);
 }
 
 #btn-add {
@@ -43,7 +43,7 @@ body {
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.50);
 }
 
-.titulo-contaniner {
+.titulo-container {
   font-size: 22px;
   padding: 20px 5px;
 }
@@ -94,7 +94,7 @@ body {
   color: #ff0000;
 }
 
-.btn-rocket {
+.btn-complete {
   border: none;
   background: transparent;
   position: absolute;
@@ -107,20 +107,20 @@ body {
   transition: opacity 0.5s ease-in-out;
 }
 
-.fa-rocket {
-  color: #8052ec;
+.fa-angles-right {
+  color: #06db06;
 }
 
 .item-tarefa:hover .botao-delete {
   opacity: 1;
 }
 
-.item-tarefa:hover .btn-rocket {
+.item-tarefa:hover .btn-complete {
   opacity: 1;
 }
 
 .concluido {
-  background-color: greenyellow;
+  background-color: rgb(102, 102, 102);
   text-decoration: line-through;
 }
 

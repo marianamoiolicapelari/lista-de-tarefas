@@ -2,13 +2,7 @@ let input = document.getElementById('input-principal')
 let button = document.getElementById('btn-add')
 let task = document.getElementById('nome-tarefa-id')
 let fullList = document.getElementById('tarefas')
-//let dados = localStorage.getItem('lista')
 
-/*
-if (dados == null) {
-  localStorage.setItem('lista', JSON.stringify(arrayAddTask))
-}
-*/
 let arrayAddTask = []
 reloadTask()
 
@@ -20,10 +14,11 @@ function viewTask() {
 
      newLi = newLi + `
       <li class="item-tarefa ${addTask.finish == true ? 'concluido' : ''}">
-        <button class="btn-rocket" onclick="completeTask(${index})">
-            <i class="fa-solid fa-rocket"></i>
+        <button class="btn-complete" onclick="completeTask(${index})">
+            <i class="fa-solid fa-angles-right"></i>
         </button>
-    
+
+           
         <p class="nome-tarefa ${addTask.finish == true ? 'concluido' : ''} id="nome-tarefa-id">${addTask.addTask}</p>
 
         <button class="botao-delete" onclick="delTask(${index})">
