@@ -2,14 +2,16 @@ let input = document.getElementById('input-principal')
 let button = document.getElementById('btn-add')
 let task = document.getElementById('nome-tarefa-id')
 let fullList = document.getElementById('tarefas')
-let dados = localStorage.getItem('lista')
+//let dados = localStorage.getItem('lista')
 
+/*
 if (dados == null) {
   localStorage.setItem('lista', JSON.stringify(arrayAddTask))
 }
-
+*/
 let arrayAddTask = []
 reloadTask()
+
 
 function viewTask() {
   let newLi = ''
@@ -41,16 +43,19 @@ function delTask(index){
 }
 
 function addTask() {
-  arrayAddTask.push({
-    addTask: input.value,
-    finish: false
-  })
 
-  
+  if(input.value){
+      arrayAddTask.push({
+        addTask: input.value,
+        finish: false
+      })
+  } else {
+      alert('Digite uma tarefa!')
+  }
+
+  input.focus()  
+  input.value = ''   
   viewTask()
-
-  input.value = ''
-  input.focus()
 }
 
 function completeTask(index) {
@@ -62,9 +67,21 @@ function completeTask(index) {
 function reloadTask() {
   let myTask = localStorage.getItem("lista")
 
-  arrayAddTask = JSON.parse(myTask)
+  if(myTask){
+      arrayAddTask = JSON.parse(myTask)
 
-  viewTask()
+      viewTask()
+
+  }
+}
+
+function addedForEnter(teclas){
+
+    if(teclas.key === 'Enter'){
+      addTask()
+    }
 }
 
 button.addEventListener('click', addTask)
+
+document.addEventListener('keypress', addedForEnter)
